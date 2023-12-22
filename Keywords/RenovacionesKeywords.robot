@@ -19,22 +19,7 @@ obteniendo valor columnas
     ${res}=     Dato_columna    ${hoja}   ${fila}     ${col}
     [Return]    ${res}
 
-valida texto
-    [Arguments]    ${numero}
-    ${filas}=    numero de filas
-    ${i}=   convert to integer    0
-    ${repeticion}=  convert to integer    5
-    FOR  ${result}  IN  ${repeticion}
-       Input text          ${inumero}   ${numero}
-       sleep    1
-       ${inserted_text} =  get element attribute    ${inumero}      value
-       ${num}=  convert to string       ${numero}
-       ${inserted_text}=    convert to string    ${inserted_text}
-       log to console   texto insertado${inserted_text}
-       log to console    numero${numero}
-       IF    ${inserted_text}==${numero}    BREAK
 
-    END
 
 Entonces Registro resultado
     ${filas}=   numero de filas
@@ -54,6 +39,23 @@ Entonces Registro resultado
      run keyword if    ${imprime resultado}   escribir resultado     ${posicion}
      ...    ELSE     ingresa de nuevo al modulo renovacion
 
+
+    END
+valida texto
+    [Arguments]    ${numero}
+    ${filas}=    numero de filas
+
+    FOR    ${Result}    IN RANGE    5
+       Input text          ${inumero}   ${numero}
+       sleep    1
+       ${inserted_text} =  get element attribute    ${inumero}      value
+       ${num}=  convert to string       ${numero}
+       ${inserted_text}=  replace string     ${inserted_text}   _       0
+       log to console   texto insertado${inserted_text}
+       log to console    numero${numero}
+       ${Result}=   evaluate    ${inserted_text}==${num}
+       log to console    result${result}
+       IF    ${Result}== True    BREAK
 
     END
 
