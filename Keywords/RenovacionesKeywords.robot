@@ -10,24 +10,26 @@ Entonces realizo la busqueda de un numero
 
 numero de filas
     [Documentation]    leyendo el numero de filas
-    ${res}=     Numero_filas    numeros
+    [Arguments]     ${nombreDoc}
+    ${res}=     Numero_filas    ${nombreDoc}    numeros
     [Return]    ${res}
 
 obteniendo valor columnas
     [Documentation]    obteniendo el valor de las columnas
-    [Arguments]    ${hoja}   ${fila}     ${col}
-    ${res}=     Dato_columna    ${hoja}   ${fila}     ${col}
+    [Arguments]   ${nombreDoc}  ${hoja}   ${fila}     ${col}
+    ${res}=     Dato_columna    ${nombreDoc}    ${hoja}   ${fila}     ${col}
     [Return]    ${res}
 
 
 
 Entonces Registro resultado
-    ${filas}=   numero de filas
+    [Arguments]   ${nombreDoc}
+    ${filas}=   numero de filas     ${nombreDoc}
     FOR    ${i}     IN RANGE    2   ${filas}+1
-    ${numero}=  obteniendo valor columnas       numeros     ${i}    1
+    ${numero}=  obteniendo valor columnas  ${nombreDoc}     numeros     ${i}    1
      wait until element is enabled    ${inumero}    25
      sleep    1
-     valida texto   ${numero}
+     valida texto   ${numero}   ${nombreDoc}
      #input text    ${inumero}    ${numero}
      sleep    1
      wait until element is enabled    ${btnbuscar}      30      Error: kmkk
@@ -36,14 +38,14 @@ Entonces Registro resultado
      ${posicion}=   convert to string    ${i}
      ${imprime resultado}     run keyword and return status    wait until element is visible    ${lblResultado}       60      Error:No se visualizo el resultado
      log to console    no se muestra resultado${imprime resultado}
-     run keyword if    ${imprime resultado}   escribir resultado     ${posicion}
+     run keyword if    ${imprime resultado}   escribir resultado     ${posicion}    ${nombreDoc}
      ...    ELSE     ingresa de nuevo al modulo renovacion
 
 
     END
 valida texto
-    [Arguments]    ${numero}
-    ${filas}=    numero de filas
+    [Arguments]    ${numero}    ${nombreDoc}
+    ${filas}=    numero de filas    ${nombreDoc}
 
     FOR    ${Result}    IN RANGE    5
        Input text          ${inumero}   ${numero}
@@ -61,30 +63,30 @@ valida texto
 
 
 escribir resultado
-    [Arguments]    ${posicion}
+    [Arguments]    ${posicion}  ${nombreDoc}
      sleep    1
 
      ${resultado}=  get text    ${lblresultado}
      log to console    resultadooooo${resultado}
      ${resultado}=   convert to string    ${resultado}
-     escribe_mensaje    ${posicion}    ${resultado}
+     escribe_mensaje    ${posicion}    ${resultado}     ${nombreDoc}
      ${flag}     run keyword and return status    element should be enabled  ${btnContinuar}
      log to console    bandera continuar${flag}
-     run keyword if    ${flag}   validar datos de renovacion     ${posicion}
+     run keyword if    ${flag}   validar datos de renovacion     ${posicion}    ${nombreDoc}
      ...    ELSE     ingresa de nuevo al modulo renovacion
 
 validar datos de renovacion
-    [Arguments]    ${i}
+    [Arguments]    ${i}   ${nombreDoc}
     wait until element is not visible    ${divModal}       80
     sleep    2
     click element    ${btnContinuar}
     sleep    2
     ${flag}     run keyword and return status     wait until element is visible    ${lbldiasrestantes}      30      Error:No se visualizo los dias restantes
      log to console    no se muestra dias restantes${flag}
-     run keyword if    ${flag}   Escribir datos de renovacion     ${i}
+     run keyword if    ${flag}   Escribir datos de renovacion     ${i}  ${nombreDoc}
      ...    ELSE     ingresa de nuevo al modulo renovacion
 Escribir datos de renovacion
-    [Arguments]    ${i}
+    [Arguments]    ${i}     ${nombreDoc}
     sleep    1
     wait until element is visible    ${lbldiasrestantes}        30      Error:No se visualizo los dias restantes
     ${equipo}=   get text           ${lblequipo}
@@ -97,13 +99,13 @@ Escribir datos de renovacion
     ${plazoactual}=     convert to string    ${plazoactual}
     ${plazorestante}=   convert to string    ${plazorestante}
     ${diasrestantes}=   convert to string    ${diasrestantes}
-    escribe_resultado   ${i}    ${equipo}   ${financiamiento}      ${plazoactual}   ${plazorestante}    ${diasrestantes}
+    escribe_resultado   ${i}    ${equipo}   ${financiamiento}      ${plazoactual}   ${plazorestante}    ${diasrestantes}    ${nombreDoc}
     ${Diasrestint}=         convert to integer    ${diasrestantes}
     log to console    dias restantes int${Diasrestint}
     ${numero}=  convert to integer    90
     #${flag}     run keyword and return status    element should be enabled    ${btnContinuar2}
     #run keyword if    ${flag}   Obtener datos para renovacion   ${i}
-    run keyword if    ${Diasrestint}<=${numero}     Obtener datos para renovacion   ${i}
+    run keyword if    ${Diasrestint}<=${numero}     Obtener datos para renovacion   ${i}   ${nombreDoc}
     ...    ELSE     ingresa de nuevo al modulo renovacion
 
 ingresa de nuevo al modulo renovacion
@@ -114,7 +116,7 @@ ingresa de nuevo al modulo renovacion
 
 
 Obtener datos para renovacion
-    [Arguments]    ${i}
+    [Arguments]    ${i}     ${nombreDoc}
     assert click element    ${btnContinuar2}        25       Error:No se pudo obtener los datos de renovacion
     ${Appaterno}=   get element attribute       ${lblAppaterno}        value
     ${Apmaterno}=   get element attribute       ${lblApmaterno}        value
@@ -160,7 +162,7 @@ Obtener datos para renovacion
     ${Colonia}=         convert to string    ${Colonia}
     ${MetodoPago}=      convert to string    ${MetodoPago}
     ${Oferta}=          convert to string    ${Oferta}
-    escribe_datos_renovacion    ${i}    ${Appaterno}    ${Apmaterno}    ${Nombre}   ${Rfc}  ${Email}        ${TCalle}   ${Calle}    ${NumExt}   ${NumInt}   ${Cp}   ${Municipio}    ${Estado}   ${Ciudad}   ${Colonia}  ${MetodoPago}   ${Oferta}
+    escribe_datos_renovacion    ${i}    ${Appaterno}    ${Apmaterno}    ${Nombre}   ${Rfc}  ${Email}        ${TCalle}   ${Calle}    ${NumExt}   ${NumInt}   ${Cp}   ${Municipio}    ${Estado}   ${Ciudad}   ${Colonia}  ${MetodoPago}   ${Oferta}       ${nombreDoc}
     reload page
     assert click element     ${btntramites}      5       Error:No se pudo acceder al módulo de Tramites en línea
     assert click element     ${hrefrenovacion}   5       Error:No se pudo acceder al servicio de renovaciones

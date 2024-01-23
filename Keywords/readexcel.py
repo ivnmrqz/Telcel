@@ -1,31 +1,38 @@
 import openpyxl,time
-archivo=openpyxl.load_workbook("D:\\Proyectos GIT\\Telcel\\DATA\\numeros.xlsx")
 
-def Numero_filas(hoja):
+def archivo(nombre):
+    archivo=openpyxl.load_workbook("D:\\Proyectos GIT\\Telcel\\DATA\\numeros.xlsx")
+    return archivo
+def Numero_filas(nombre,hoja):
+    archivo = openpyxl.load_workbook("D:\\Proyectos GIT\\Telcel\\DATA\\"+nombre+".xlsx")
     ac=archivo[hoja]
     return ac.max_row
 
-def Dato_columna(hoja,fila,col):
+def Dato_columna(nombre,hoja,fila,col):
+    archivo = openpyxl.load_workbook("D:\\Proyectos GIT\\Telcel\\DATA\\" + nombre + ".xlsx")
     ac=archivo[hoja]
     col=ac.cell(int(fila),int(col))
     return col.value
 
-def escribe_mensaje(i,ms):
+def escribe_mensaje(i,ms,nombre):
+    archivo = openpyxl.load_workbook("D:\\Proyectos GIT\\Telcel\\DATA\\" + nombre + ".xlsx")
     ac=archivo["numeros"]
     msg=ac["B"+i].value=ms
-    archivo.save("D:\\Proyectos GIT\\Telcel\\DATA\\numeros.xlsx")
+    archivo.save("D:\\Proyectos GIT\\Telcel\\DATA\\"+nombre+".xlsx")
 
-def escribe_resultado(i,ms1,ms2,ms3,ms4,ms5):
+def escribe_resultado(i,ms1,ms2,ms3,ms4,ms5,nombre):
+    archivo = openpyxl.load_workbook("D:\\Proyectos GIT\\Telcel\\DATA\\" + nombre + ".xlsx")
     ac = archivo["numeros"]
     msg = ac["C" + i].value = ms1
     msg = ac["D" + i].value = ms2
     msg = ac["E" + i].value = ms3
     msg = ac["F" + i].value = ms4
     msg = ac["G" + i].value = ms5
-    archivo.save("D:\\Proyectos GIT\\Telcel\\DATA\\numeros.xlsx")
+    archivo.save("D:\\Proyectos GIT\\Telcel\\DATA\\"+nombre+".xlsx")
 
 
-def escribe_datos_renovacion(i,ms1,ms2,ms3,ms4,ms5,ms6,ms7,ms8,ms9,ms10,ms11,ms12,ms13,ms14,ms15,ms16):
+def escribe_datos_renovacion(i,ms1,ms2,ms3,ms4,ms5,ms6,ms7,ms8,ms9,ms10,ms11,ms12,ms13,ms14,ms15,ms16,nombre):
+    archivo = openpyxl.load_workbook("D:\\Proyectos GIT\\Telcel\\DATA\\" + nombre + ".xlsx")
     ac= archivo ["numeros"]
     msg = ac["H" + i].value = ms1
     msg = ac["I" + i].value = ms2
@@ -43,5 +50,5 @@ def escribe_datos_renovacion(i,ms1,ms2,ms3,ms4,ms5,ms6,ms7,ms8,ms9,ms10,ms11,ms1
     msg = ac["U" + i].value = ms14
     msg = ac["V" + i].value = ms15
     msg = ac["W" + i].value = ms16
-    archivo.save("D:\\Proyectos GIT\\Telcel\\DATA\\numeros.xlsx")
+    archivo.save("D:\\Proyectos GIT\\Telcel\\DATA\\"+nombre+".xlsx")
 

@@ -1,0 +1,6 @@
+datasources:ecfac162df43744f26898adfd8a9f3fa990cb4c9
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:089d315273814a06db36c71801791a317fba1dd1
+--suite Suites.001-BusquedaClientes
+--suite Suites.002-BusquedaClientes

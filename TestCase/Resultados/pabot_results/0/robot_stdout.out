@@ -1,0 +1,35 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.001-BusquedaClientes                                                   
+==============================================================================
+Validar renovacion de planes :: Validar el tiempo que tienen los n... UserId: DR9RECALL10
+UserId: Dr9Rec@ll50
+UserId: OS8RECO7
+UserId: Dr9Rec@ll50
+banderaaa True
+texto insertado5527597790
+numero5527597790
+resultTrue
+no se muestra resultadoTrue
+resultadoooooCliente encontrado: MARIZA ARELLANO
+bandera continuarTrue
+no se muestra dias restantesTrue
+dias restantes int0
+texto insertado5515043182
+numero5515043182
+resultTrue
+no se muestra resultadoTrue
+resultadoooooCliente encontrado: JOSE LOPEZ
+bandera continuarTrue
+no se muestra dias restantesTrue
+dias restantes int0
+| PASS |
+------------------------------------------------------------------------------
+Suites.001-BusquedaClientes                                           | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  D:\Proyectos GIT\Telcel\TestCase\Resultados\pabot_results\0\output.xml

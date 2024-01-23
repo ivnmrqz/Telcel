@@ -1,2 +1,3 @@
 cd D:\Proyectos GIT\Telcel\TestCase\
-robot -d ..\reportes  -i Renovacion  001-BusquedaClientes.robot
+pabot --processes 2 --outputdir Resultados  .\*.robot
+

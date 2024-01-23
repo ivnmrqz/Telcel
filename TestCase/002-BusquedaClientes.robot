@@ -17,7 +17,7 @@ Validar renovacion de planes
     Entonces inicio sesion como distribuidor
     y valido si inicie sesión
     Cuando accedo al modulo de renovaciones
-    Entonces Registro resultado     numeros1
+    Entonces Registro resultado     numeros2
 
 
 
