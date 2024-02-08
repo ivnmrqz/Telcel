@@ -20,5 +20,3 @@ Validar renovacion de planes
     Entonces Registro resultado     numeros1
 
 
-
-
