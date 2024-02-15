@@ -232,7 +232,7 @@ Obtener datos para activacion
     ${Rfc}=         get element attribute       ${lblRfc}              value
     scroll element into view    ${lblmail}
     ${Email}=       get element attribute       ${lblmail}             value
-    ${TelCasa}=         get element attribute    ${lblTelCasa}          Value
+    ${TelCasa}=         get element attribute    ${lblTelCasa}           Value
     ${Teloficina}=      get element attribute    ${lblTelOficina}       value
     execute javascript          window.scrollTo(0,450)
     scroll element into view    ${lbltcalleA}
@@ -266,9 +266,9 @@ Obtener datos para activacion
     ${Estado}=          convert to string    ${Estado}
     ${Ciudad}=          convert to string    ${Ciudad}
     ${Colonia}=         convert to string    ${Colonia}
-    ${lblTelCasa}=      convert to string    ${lblTelCasa}
+    ${TelCasa}=      convert to string    ${lblTelCasa}
     ${Teloficina}=          convert to string    ${Teloficina}
-    escribe_datos_renovacion    ${i}    ${Appaterno}    ${Apmaterno}    ${Nombre}   ${Rfc}  ${Email}        ${TCalle}   ${Calle}    ${NumExt}   ${NumInt}   ${Cp}   ${Municipio}    ${Estado}   ${Ciudad}   ${Colonia}  ${lblTelCasa}   ${Teloficina}       ${nombreDoc}
+    escribe_datos_renovacion        ${i}        ${Appaterno}        ${Apmaterno}        ${Nombre}       ${Rfc}      ${Email}        ${TCalle}       ${Calle}        ${NumExt}       ${NumInt}       ${Cp}       ${Municipio}        ${Estado}       ${Ciudad}       ${Colonia}      ${TelCasa}      ${Teloficina}       ${nombreDoc}
     reload page
     assert click element     ${btntramites}      5       Error:No se pudo acceder al módulo de Tramites en línea
     assert click element     ${hrefrenovacion}   5       Error:No se pudo acceder al servicio de renovaciones

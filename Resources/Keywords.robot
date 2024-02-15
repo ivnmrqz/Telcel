@@ -7,6 +7,8 @@ ${User}
 ${Password}
 ${UserDis}
 ${PasswordDis}
+${UserCotizador}
+${PasswordCotizador}
 
 *** Keywords ***
 Realizo carga de tc
@@ -29,6 +31,14 @@ Realizo carga de tc
     ${PasswordDis} =             Read Excel Cell    row_num=${Counter}      col_num=4
         set global variable     ${PasswordDis}
         log to console            UserId: ${PasswordDis}
+
+    ${UserCotizador} =             Read Excel Cell    row_num=${Counter}      col_num=5
+        set global variable     ${UserCotizador}
+        log to console            UserId: ${UserCotizador}
+    ${PasswordCotizador} =             Read Excel Cell    row_num=${Counter}      col_num=6
+        set global variable     ${PasswordCotizador}
+        log to console            UserId: ${PasswordCotizador}
+
 Assert to element
     [Arguments]    ${Element}   ${Timeout}      ${MsError}
     wait until element is visible   ${Element}  ${Timeout}      ${MsError}

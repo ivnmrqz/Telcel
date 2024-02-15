@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.8.0 on win32)" generated="20240207 22:23:01.199" rpa="false" schemaversion="4">
-<suite id="s1" name="001-BusquedaClientes" source="D:\Proyectos GIT\Telcel\TestCase\001-BusquedaClientes.robot">
-<test id="s1-t1" name="Validar renovacion de planes" line="9">
+<robot generator="Robot 6.1.1 (Python 3.8.0 on win32)" generated="20240209 19:39:39.180" rpa="false" schemaversion="4">
+<suite id="s1" name="003-Cotizador" source="D:\Proyectos GIT\Telcel\TestCase\003-Cotizador.robot">
+<test id="s1-t1" name="Validar cotizador de planes" line="9">
 <kw name="Realizo carga de tc" library="Keywords">
 <arg>1</arg>
 <doc>Se realiza la carga de un archivo de excel que contiene los datos del cliente</doc>
@@ -9,15 +9,15 @@
 <var>${TC}</var>
 <arg>${TC}</arg>
 <doc>Converts the given item to a floating point number.</doc>
-<msg timestamp="20240207 22:23:02.251" level="INFO">${TC} = 1.0</msg>
-<status status="PASS" starttime="20240207 22:23:02.251" endtime="20240207 22:23:02.251"/>
+<msg timestamp="20240209 19:39:39.625" level="INFO">${TC} = 1.0</msg>
+<status status="PASS" starttime="20240209 19:39:39.624" endtime="20240209 19:39:39.625"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${Counter}</var>
 <arg>${TC} + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240207 22:23:02.252" level="INFO">${Counter} = 2.0</msg>
-<status status="PASS" starttime="20240207 22:23:02.251" endtime="20240207 22:23:02.252"/>
+<msg timestamp="20240209 19:39:39.625" level="INFO">${Counter} = 2.0</msg>
+<status status="PASS" starttime="20240209 19:39:39.625" endtime="20240209 19:39:39.625"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${Counter} == 2</arg>
@@ -29,2302 +29,315 @@
 <arg>${CSV}</arg>
 <arg>${Hoja}</arg>
 <doc>Opens xlsx document file.</doc>
-<status status="PASS" starttime="20240207 22:23:02.253" endtime="20240207 22:23:02.265"/>
+<status status="PASS" starttime="20240209 19:39:39.625" endtime="20240209 19:39:39.631"/>
 </kw>
-<status status="PASS" starttime="20240207 22:23:02.252" endtime="20240207 22:23:02.265"/>
+<status status="PASS" starttime="20240209 19:39:39.625" endtime="20240209 19:39:39.631"/>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <var>${User}</var>
 <arg>row_num=${Counter}</arg>
 <arg>col_num=1</arg>
 <doc>Returns content of a cell.</doc>
-<msg timestamp="20240207 22:23:02.266" level="INFO">${User} = DR9RECALL10</msg>
-<status status="PASS" starttime="20240207 22:23:02.265" endtime="20240207 22:23:02.266"/>
+<msg timestamp="20240209 19:39:39.631" level="INFO">${User} = DR9RECALL10</msg>
+<status status="PASS" starttime="20240209 19:39:39.631" endtime="20240209 19:39:39.631"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${User}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20240207 22:23:02.266" level="INFO">${User} = DR9RECALL10</msg>
-<status status="PASS" starttime="20240207 22:23:02.266" endtime="20240207 22:23:02.266"/>
+<msg timestamp="20240209 19:39:39.632" level="INFO">${User} = DR9RECALL10</msg>
+<status status="PASS" starttime="20240209 19:39:39.632" endtime="20240209 19:39:39.632"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>UserId: ${User}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:02.267" endtime="20240207 22:23:02.267"/>
+<status status="PASS" starttime="20240209 19:39:39.632" endtime="20240209 19:39:39.633"/>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <var>${Password}</var>
 <arg>row_num=${Counter}</arg>
 <arg>col_num=2</arg>
 <doc>Returns content of a cell.</doc>
-<msg timestamp="20240207 22:23:02.268" level="INFO">${Password} = Dr9Rec@ll50</msg>
-<status status="PASS" starttime="20240207 22:23:02.267" endtime="20240207 22:23:02.268"/>
+<msg timestamp="20240209 19:39:39.633" level="INFO">${Password} = Dr9Rec@ll50</msg>
+<status status="PASS" starttime="20240209 19:39:39.633" endtime="20240209 19:39:39.633"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${Password}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20240207 22:23:02.268" level="INFO">${Password} = Dr9Rec@ll50</msg>
-<status status="PASS" starttime="20240207 22:23:02.268" endtime="20240207 22:23:02.268"/>
+<msg timestamp="20240209 19:39:39.634" level="INFO">${Password} = Dr9Rec@ll50</msg>
+<status status="PASS" starttime="20240209 19:39:39.633" endtime="20240209 19:39:39.634"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>UserId: ${Password}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:02.268" endtime="20240207 22:23:02.269"/>
+<status status="PASS" starttime="20240209 19:39:39.634" endtime="20240209 19:39:39.634"/>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <var>${UserDis}</var>
 <arg>row_num=${Counter}</arg>
 <arg>col_num=3</arg>
 <doc>Returns content of a cell.</doc>
-<msg timestamp="20240207 22:23:02.270" level="INFO">${UserDis} = OS8RECO7</msg>
-<status status="PASS" starttime="20240207 22:23:02.269" endtime="20240207 22:23:02.270"/>
+<msg timestamp="20240209 19:39:39.634" level="INFO">${UserDis} = OS8RECO7</msg>
+<status status="PASS" starttime="20240209 19:39:39.634" endtime="20240209 19:39:39.634"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${UserDis}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20240207 22:23:02.270" level="INFO">${UserDis} = OS8RECO7</msg>
-<status status="PASS" starttime="20240207 22:23:02.270" endtime="20240207 22:23:02.270"/>
+<msg timestamp="20240209 19:39:39.635" level="INFO">${UserDis} = OS8RECO7</msg>
+<status status="PASS" starttime="20240209 19:39:39.635" endtime="20240209 19:39:39.635"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>UserId: ${UserDis}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:02.270" endtime="20240207 22:23:02.271"/>
+<status status="PASS" starttime="20240209 19:39:39.635" endtime="20240209 19:39:39.635"/>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <var>${PasswordDis}</var>
 <arg>row_num=${Counter}</arg>
 <arg>col_num=4</arg>
 <doc>Returns content of a cell.</doc>
-<msg timestamp="20240207 22:23:02.271" level="INFO">${PasswordDis} = Dr9Rec@ll60</msg>
-<status status="PASS" starttime="20240207 22:23:02.271" endtime="20240207 22:23:02.271"/>
+<msg timestamp="20240209 19:39:39.635" level="INFO">${PasswordDis} = Dr9Rec@ll60</msg>
+<status status="PASS" starttime="20240209 19:39:39.635" endtime="20240209 19:39:39.636"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${PasswordDis}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20240207 22:23:02.272" level="INFO">${PasswordDis} = Dr9Rec@ll60</msg>
-<status status="PASS" starttime="20240207 22:23:02.271" endtime="20240207 22:23:02.272"/>
+<msg timestamp="20240209 19:39:39.636" level="INFO">${PasswordDis} = Dr9Rec@ll60</msg>
+<status status="PASS" starttime="20240209 19:39:39.636" endtime="20240209 19:39:39.636"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>UserId: ${PasswordDis}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:02.272" endtime="20240207 22:23:02.272"/>
+<status status="PASS" starttime="20240209 19:39:39.636" endtime="20240209 19:39:39.636"/>
 </kw>
-<status status="PASS" starttime="20240207 22:23:02.250" endtime="20240207 22:23:02.272"/>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${UserCotizador}</var>
+<arg>row_num=${Counter}</arg>
+<arg>col_num=5</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240209 19:39:39.637" level="INFO">${UserCotizador} = JE7LMVA7</msg>
+<status status="PASS" starttime="20240209 19:39:39.636" endtime="20240209 19:39:39.637"/>
 </kw>
-<kw name="Cuando el usuario abre el navegador" library="LoginKeywords">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${UserCotizador}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240209 19:39:39.637" level="INFO">${UserCotizador} = JE7LMVA7</msg>
+<status status="PASS" starttime="20240209 19:39:39.637" endtime="20240209 19:39:39.637"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>UserId: ${UserCotizador}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240209 19:39:39.637" endtime="20240209 19:39:39.637"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${PasswordCotizador}</var>
+<arg>row_num=${Counter}</arg>
+<arg>col_num=6</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240209 19:39:39.638" level="INFO">${PasswordCotizador} = N=o6t=*7</msg>
+<status status="PASS" starttime="20240209 19:39:39.637" endtime="20240209 19:39:39.638"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${PasswordCotizador}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240209 19:39:39.638" level="INFO">${PasswordCotizador} = N=o6t=*7</msg>
+<status status="PASS" starttime="20240209 19:39:39.638" endtime="20240209 19:39:39.638"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>UserId: ${PasswordCotizador}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240209 19:39:39.638" endtime="20240209 19:39:39.639"/>
+</kw>
+<status status="PASS" starttime="20240209 19:39:39.624" endtime="20240209 19:39:39.639"/>
+</kw>
+<kw name="Cuando el usuario abre el navegador" library="CotizadorHome">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
+<arg>${urlCot}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240207 22:23:02.274" level="INFO">Opening browser 'Chrome' to base url 'https://www.distribuidor.telcel.com:4475/Portal-Distribuidores/app/login'.</msg>
-<status status="PASS" starttime="20240207 22:23:02.273" endtime="20240207 22:23:05.428"/>
+<msg timestamp="20240209 19:39:39.640" level="INFO">Opening browser 'Chrome' to base url 'https://amt.telcelinstitucional.com:5443/cudgw2/login'.</msg>
+<status status="PASS" starttime="20240209 19:39:39.640" endtime="20240209 19:39:43.113"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240207 22:23:05.429" endtime="20240207 22:23:05.552"/>
+<status status="PASS" starttime="20240209 19:39:43.113" endtime="20240209 19:39:43.240"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240207 22:23:05.553" endtime="20240207 22:23:05.555"/>
+<status status="PASS" starttime="20240209 19:39:43.240" endtime="20240209 19:39:43.241"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>.1s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20240207 22:23:05.556" endtime="20240207 22:23:05.556"/>
+<status status="PASS" starttime="20240209 19:39:43.241" endtime="20240209 19:39:43.241"/>
 </kw>
-<status status="PASS" starttime="20240207 22:23:02.273" endtime="20240207 22:23:05.556"/>
+<status status="PASS" starttime="20240209 19:39:39.639" endtime="20240209 19:39:43.241"/>
 </kw>
-<kw name="Entonces inicio sesión" library="LoginKeywords">
-<kw name="assert input text" library="Keywords">
-<arg>${TxtUser}</arg>
-<arg>${User}</arg>
-<arg>5</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:05.559" endtime="20240207 22:23:05.829"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:05.829" endtime="20240207 22:23:06.205"/>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20240207 22:23:06.205" endtime="20240207 22:23:06.484"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:06.486" level="INFO">Typing text 'DR9RECALL10' into text field 'xpath://input[contains(@id,'j_username')]'.</msg>
-<status status="PASS" starttime="20240207 22:23:06.485" endtime="20240207 22:23:06.983"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:05.558" endtime="20240207 22:23:06.983"/>
-</kw>
-<kw name="assert input text" library="Keywords">
-<arg>${TxtPass}</arg>
-<arg>${Password}</arg>
-<arg>5</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:06.984" endtime="20240207 22:23:07.232"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:07.232" endtime="20240207 22:23:07.606"/>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20240207 22:23:07.606" endtime="20240207 22:23:07.872"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:07.873" level="INFO">Typing text 'Dr9Rec@ll50' into text field 'xpath://input[contains(@id,'pwd')]'.</msg>
-<status status="PASS" starttime="20240207 22:23:07.872" endtime="20240207 22:23:08.322"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:06.984" endtime="20240207 22:23:08.322"/>
-</kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>cmbRegiones</arg>
-<arg>9</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20240207 22:23:08.324" level="INFO">Selecting options from selection list 'cmbRegiones' by index 9.</msg>
-<status status="PASS" starttime="20240207 22:23:08.322" endtime="20240207 22:23:10.398"/>
-</kw>
-<kw name="assert click element" library="Keywords">
-<arg>${BtnLogin}</arg>
-<arg>5</arg>
-<arg>Error:No se pudo dar clic en el botón de inicio de sesión</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:10.399" endtime="20240207 22:23:10.650"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:10.651" endtime="20240207 22:23:11.011"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:11.012" level="INFO">Clicking element 'xpath://button[@id='myBtn']'.</msg>
-<status status="PASS" starttime="20240207 22:23:11.011" endtime="20240207 22:23:11.276"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:10.398" endtime="20240207 22:23:11.276"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:05.557" endtime="20240207 22:23:11.276"/>
-</kw>
-<kw name="Y valido el inicio de sesión" library="LoginKeywords">
-<kw name="Assert to element" library="Keywords">
-<arg>${Lblhome}</arg>
+<kw name="Entonces inicio sesion como cotizador" library="CotizadorHome">
+<kw name="Sleep" library="BuiltIn">
 <arg>10</arg>
-<arg>Error:No se pudo iniciar sesión de manera correcta</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:11.278" endtime="20240207 22:23:12.582"/>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240209 19:39:53.256" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240209 19:39:43.242" endtime="20240209 19:39:53.256"/>
 </kw>
-<status status="PASS" starttime="20240207 22:23:11.277" endtime="20240207 22:23:12.582"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:11.277" endtime="20240207 22:23:12.582"/>
-</kw>
-<kw name="Cuando accedo al modulo distribuidor" library="homeKeywords">
 <kw name="assert click element" library="Keywords">
-<arg>${btnActivaciones}</arg>
-<arg>5</arg>
-<arg>Error:No se pudo dar clic en el botón Activaciones</arg>
+<arg>${BtnRegion}</arg>
+<arg>30</arg>
+<arg>Error:No se pudo visualizar la región</arg>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <arg>${Timeout}</arg>
 <arg>${MsError}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:12.585" endtime="20240207 22:23:12.831"/>
+<status status="PASS" starttime="20240209 19:39:53.258" endtime="20240209 19:39:53.521"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <arg>${Timeout}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:12.831" endtime="20240207 22:23:13.205"/>
+<status status="PASS" starttime="20240209 19:39:53.522" endtime="20240209 19:39:53.893"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:13.207" level="INFO">Clicking element 'xpath=//a[@href='#'][contains(.,'Activaciones')]'.</msg>
-<status status="PASS" starttime="20240207 22:23:13.206" endtime="20240207 22:23:13.486"/>
+<msg timestamp="20240209 19:39:53.896" level="INFO">Clicking element 'xpath://*[@id='btn-region']'.</msg>
+<status status="PASS" starttime="20240209 19:39:53.894" endtime="20240209 19:39:54.594"/>
 </kw>
-<status status="PASS" starttime="20240207 22:23:12.585" endtime="20240207 22:23:13.486"/>
+<status status="PASS" starttime="20240209 19:39:53.257" endtime="20240209 19:39:54.594"/>
 </kw>
 <kw name="assert click element" library="Keywords">
-<arg>${btntransforma}</arg>
-<arg>5</arg>
-<arg>Error:No se pudo dar clic en el botón Transforma</arg>
+<arg>${Btn9}</arg>
+<arg>30</arg>
+<arg>Error:No se pudo seleccionar la region</arg>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <arg>${Timeout}</arg>
 <arg>${MsError}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:13.487" endtime="20240207 22:23:14.206"/>
+<status status="PASS" starttime="20240209 19:39:54.594" endtime="20240209 19:39:54.845"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <arg>${Timeout}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:14.206" endtime="20240207 22:23:14.582"/>
+<status status="PASS" starttime="20240209 19:39:54.846" endtime="20240209 19:39:55.203"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:14.584" level="INFO">Clicking element 'xpath=//span[@class='ui-menuitem-text'][contains(.,'SISACT Transforma')]'.</msg>
-<status status="PASS" starttime="20240207 22:23:14.582" endtime="20240207 22:23:15.347"/>
+<msg timestamp="20240209 19:39:55.205" level="INFO">Clicking element 'xpath://*[@id='idMainRegion']/div[3]/button[3]'.</msg>
+<status status="PASS" starttime="20240209 19:39:55.204" endtime="20240209 19:39:55.450"/>
 </kw>
-<status status="PASS" starttime="20240207 22:23:13.486" endtime="20240207 22:23:15.347"/>
+<status status="PASS" starttime="20240209 19:39:54.594" endtime="20240209 19:39:55.450"/>
 </kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>NEW</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20240207 22:23:15.347" endtime="20240207 22:23:15.784"/>
+<kw name="assert click element" library="Keywords">
+<arg>${BtnAplicar}</arg>
+<arg>30</arg>
+<arg>Error:No se pudo dar click en Aplicar</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Timeout}</arg>
+<arg>${MsError}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240209 19:39:55.451" endtime="20240209 19:39:55.699"/>
 </kw>
-<status status="PASS" starttime="20240207 22:23:12.584" endtime="20240207 22:23:15.784"/>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240209 19:39:55.699" endtime="20240209 19:39:56.027"/>
 </kw>
-<kw name="Entonces inicio sesion como distribuidor" library="homeKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240209 19:39:56.027" level="INFO">Clicking element 'xpath://*[@id='btn-region-aplicar-entrar']'.</msg>
+<status status="PASS" starttime="20240209 19:39:56.027" endtime="20240209 19:39:56.522"/>
+</kw>
+<status status="PASS" starttime="20240209 19:39:55.450" endtime="20240209 19:39:56.522"/>
+</kw>
 <kw name="assert input text" library="Keywords">
-<arg>${TxtUserDis}</arg>
-<arg>${UserDis}</arg>
-<arg>5</arg>
+<arg>${TxtUserCot}</arg>
+<arg>${UserCotizador}</arg>
+<arg>25</arg>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <arg>${Timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:15.785" endtime="20240207 22:23:17.155"/>
+<status status="PASS" starttime="20240209 19:39:56.524" endtime="20240209 19:39:58.522"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <arg>${Timeout}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:17.155" endtime="20240207 22:23:17.530"/>
+<status status="PASS" starttime="20240209 19:39:58.522" endtime="20240209 19:39:58.894"/>
 </kw>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20240207 22:23:17.530" endtime="20240207 22:23:17.781"/>
+<status status="PASS" starttime="20240209 19:39:58.894" endtime="20240209 19:39:59.128"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:17.782" level="INFO">Typing text 'OS8RECO7' into text field 'xpath://input[contains(@id,'username')]'.</msg>
-<status status="PASS" starttime="20240207 22:23:17.781" endtime="20240207 22:23:18.234"/>
+<msg timestamp="20240209 19:39:59.130" level="INFO">Typing text 'JE7LMVA7' into text field 'xpath://*[@id='username']'.</msg>
+<status status="PASS" starttime="20240209 19:39:59.129" endtime="20240209 19:39:59.549"/>
 </kw>
-<status status="PASS" starttime="20240207 22:23:15.785" endtime="20240207 22:23:18.234"/>
+<status status="PASS" starttime="20240209 19:39:56.523" endtime="20240209 19:39:59.549"/>
 </kw>
 <kw name="assert input text" library="Keywords">
-<arg>${TxtPassDis}</arg>
+<arg>${TxtPassCot}</arg>
 <arg>${PasswordDis}</arg>
-<arg>5</arg>
+<arg>25</arg>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <arg>${Timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:18.235" endtime="20240207 22:23:18.484"/>
+<status status="PASS" starttime="20240209 19:39:59.551" endtime="20240209 19:39:59.796"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <arg>${Timeout}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:18.484" endtime="20240207 22:23:18.856"/>
+<status status="PASS" starttime="20240209 19:39:59.796" endtime="20240209 19:40:00.168"/>
 </kw>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20240207 22:23:18.856" endtime="20240207 22:23:19.122"/>
+<status status="PASS" starttime="20240209 19:40:00.169" endtime="20240209 19:40:00.418"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Element}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:19.123" level="INFO">Typing text 'Dr9Rec@ll60' into text field 'xpath://input[contains(@id,'pass')]'.</msg>
-<status status="PASS" starttime="20240207 22:23:19.122" endtime="20240207 22:23:19.573"/>
+<msg timestamp="20240209 19:40:00.421" level="INFO">Typing text 'Dr9Rec@ll60' into text field 'xpath://*[@id='password']'.</msg>
+<status status="PASS" starttime="20240209 19:40:00.419" endtime="20240209 19:40:00.839"/>
 </kw>
-<status status="PASS" starttime="20240207 22:23:18.234" endtime="20240207 22:23:19.573"/>
+<status status="PASS" starttime="20240209 19:39:59.549" endtime="20240209 19:40:00.839"/>
 </kw>
-<kw name="assert click element" library="Keywords">
-<arg>${BtnLoginDis}</arg>
+<kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
-<arg>Error:No se pudo dar clic en el botón de inicio de sesión</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:19.574" endtime="20240207 22:23:19.823"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:19.823" endtime="20240207 22:23:20.194"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:20.195" level="INFO">Clicking element 'xpath://span[@class='ui-button-text ui-c'][contains(.,'INICIAR SESIÓN')]'.</msg>
-<status status="PASS" starttime="20240207 22:23:20.194" endtime="20240207 22:23:21.755"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:19.573" endtime="20240207 22:23:21.755"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:15.785" endtime="20240207 22:23:21.755"/>
-</kw>
-<kw name="y valido si inicie sesión" library="homeKeywords">
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${bandera}</var>
-<arg>wait until element is visible</arg>
-<arg>${lblR9}</arg>
-<arg>10</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lblR9}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:21.756" endtime="20240207 22:23:22.360"/>
-</kw>
-<msg timestamp="20240207 22:23:22.360" level="INFO">${bandera} = True</msg>
-<status status="PASS" starttime="20240207 22:23:21.756" endtime="20240207 22:23:22.360"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>banderaaa ${bandera}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:22.360" endtime="20240207 22:23:22.361"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:23:25.366" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20240207 22:23:22.361" endtime="20240207 22:23:25.366"/>
+<msg timestamp="20240209 19:40:05.850" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240209 19:40:00.839" endtime="20240209 19:40:05.851"/>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${bandera}!=True</arg>
-<arg>Entonces inicio sesion como distribuidor</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20240207 22:23:25.367" endtime="20240207 22:23:25.367"/>
+<status status="PASS" starttime="20240209 19:39:43.242" endtime="20240209 19:40:05.851"/>
 </kw>
-<status status="PASS" starttime="20240207 22:23:21.755" endtime="20240207 22:23:25.367"/>
-</kw>
-<kw name="Cuando accedo al modulo de renovaciones" library="homeKeywords">
-<kw name="assert click element" library="Keywords">
-<arg>${btntramites}</arg>
-<arg>20</arg>
-<arg>Error:No se pudo acceder al módulo de Tramites en línea</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:25.369" endtime="20240207 22:23:25.616"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:25.616" endtime="20240207 22:23:25.981"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:25.982" level="INFO">Clicking element 'xpath://img[contains(@id,'idMenuSenal')]'.</msg>
-<status status="PASS" starttime="20240207 22:23:25.981" endtime="20240207 22:23:26.264"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:25.368" endtime="20240207 22:23:26.264"/>
-</kw>
-<kw name="assert click element" library="Keywords">
-<arg>${hrefrenovacion}</arg>
-<arg>20</arg>
-<arg>Error:No se pudo acceder al servicio de renovaciones</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:26.266" endtime="20240207 22:23:26.517"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:26.517" endtime="20240207 22:23:26.889"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:26.890" level="INFO">Clicking element 'xpath://span[@class='ui-menuitem-text'][contains(.,'Renovación')]'.</msg>
-<status status="PASS" starttime="20240207 22:23:26.889" endtime="20240207 22:23:27.173"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:26.264" endtime="20240207 22:23:27.173"/>
-</kw>
-<kw name="Assert to element" library="Keywords">
-<arg>${lblRenovacion}</arg>
-<arg>20</arg>
-<arg>Error: No se visualiza el módulo de renovaciones</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:27.174" endtime="20240207 22:23:28.196"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:27.173" endtime="20240207 22:23:28.196"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:25.368" endtime="20240207 22:23:28.196"/>
-</kw>
-<kw name="Entonces Registro resultado" library="RenovacionesKeywords">
-<arg>numeros1</arg>
-<kw name="numero de filas" library="RenovacionesKeywords">
-<var>${filas}</var>
-<arg>${nombreDoc}</arg>
-<doc>leyendo el numero de filas</doc>
-<kw name="Numero Filas" library="readexcel">
-<var>${res}</var>
-<arg>${nombreDoc}</arg>
-<arg>numeros</arg>
-<msg timestamp="20240207 22:23:28.220" level="INFO">${res} = 3</msg>
-<status status="PASS" starttime="20240207 22:23:28.198" endtime="20240207 22:23:28.221"/>
-</kw>
-<msg timestamp="20240207 22:23:28.221" level="INFO">${filas} = 3</msg>
-<status status="PASS" starttime="20240207 22:23:28.198" endtime="20240207 22:23:28.221"/>
-</kw>
-<for flavor="IN RANGE">
-<var>${i}</var>
-<value>2</value>
-<value>${filas}+1</value>
-<iter>
-<var name="${i}">2</var>
-<kw name="obteniendo valor columnas" library="RenovacionesKeywords">
-<var>${numero}</var>
-<arg>${nombreDoc}</arg>
-<arg>numeros</arg>
-<arg>${i}</arg>
-<arg>1</arg>
-<doc>obteniendo el valor de las columnas</doc>
-<kw name="Dato Columna" library="readexcel">
-<var>${res}</var>
-<arg>${nombreDoc}</arg>
-<arg>${hoja}</arg>
-<arg>${fila}</arg>
-<arg>${col}</arg>
-<msg timestamp="20240207 22:23:28.246" level="INFO">${res} = 5543672518</msg>
-<status status="PASS" starttime="20240207 22:23:28.226" endtime="20240207 22:23:28.246"/>
-</kw>
-<msg timestamp="20240207 22:23:28.247" level="INFO">${numero} = 5543672518</msg>
-<status status="PASS" starttime="20240207 22:23:28.224" endtime="20240207 22:23:28.247"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${inumero}</arg>
-<arg>25</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:28.248" endtime="20240207 22:23:28.618"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:23:29.631" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:23:28.618" endtime="20240207 22:23:29.631"/>
-</kw>
-<kw name="valida texto" library="RenovacionesKeywords">
-<arg>${numero}</arg>
-<arg>${nombreDoc}</arg>
-<kw name="numero de filas" library="RenovacionesKeywords">
-<var>${filas}</var>
-<arg>${nombreDoc}</arg>
-<doc>leyendo el numero de filas</doc>
-<kw name="Numero Filas" library="readexcel">
-<var>${res}</var>
-<arg>${nombreDoc}</arg>
-<arg>numeros</arg>
-<msg timestamp="20240207 22:23:29.646" level="INFO">${res} = 3</msg>
-<status status="PASS" starttime="20240207 22:23:29.632" endtime="20240207 22:23:29.646"/>
-</kw>
-<msg timestamp="20240207 22:23:29.646" level="INFO">${filas} = 3</msg>
-<status status="PASS" starttime="20240207 22:23:29.632" endtime="20240207 22:23:29.646"/>
-</kw>
-<for flavor="IN RANGE">
-<var>${Result}</var>
-<value>5</value>
-<iter>
-<var name="${Result}">0</var>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${inumero}</arg>
-<arg>${numero}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:29.648" level="INFO">Typing text '5543672518' into text field 'xpath://*[@id='formIdent:folioid']'.</msg>
-<status status="PASS" starttime="20240207 22:23:29.647" endtime="20240207 22:23:30.103"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:23:31.112" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:23:30.103" endtime="20240207 22:23:31.112"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${inserted_text}</var>
-<arg>${inumero}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:23:31.365" level="INFO">${inserted_text} = 5543672518</msg>
-<status status="PASS" starttime="20240207 22:23:31.112" endtime="20240207 22:23:31.365"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${num}</var>
-<arg>${numero}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:23:31.366" level="INFO">${num} = 5543672518</msg>
-<status status="PASS" starttime="20240207 22:23:31.365" endtime="20240207 22:23:31.366"/>
-</kw>
-<kw name="Replace String" library="String">
-<var>${inserted_text}</var>
-<arg>${inserted_text}</arg>
-<arg>_</arg>
-<arg>0</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<msg timestamp="20240207 22:23:31.367" level="INFO">${inserted_text} = 5543672518</msg>
-<status status="PASS" starttime="20240207 22:23:31.367" endtime="20240207 22:23:31.367"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>texto insertado${inserted_text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:31.367" endtime="20240207 22:23:31.368"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>numero${numero}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:31.369" endtime="20240207 22:23:31.369"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${Result}</var>
-<arg>${inserted_text}==${num}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240207 22:23:31.371" level="INFO">${Result} = True</msg>
-<status status="PASS" starttime="20240207 22:23:31.370" endtime="20240207 22:23:31.371"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>result${result}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:31.371" endtime="20240207 22:23:31.371"/>
-</kw>
-<if>
-<branch type="IF" condition="${Result}== True">
-<break>
-<status status="PASS" starttime="20240207 22:23:31.372" endtime="20240207 22:23:31.372"/>
-</break>
-<status status="PASS" starttime="20240207 22:23:31.372" endtime="20240207 22:23:31.372"/>
-</branch>
-<status status="PASS" starttime="20240207 22:23:31.372" endtime="20240207 22:23:31.372"/>
-</if>
-<status status="PASS" starttime="20240207 22:23:29.647" endtime="20240207 22:23:31.372"/>
-</iter>
-<status status="PASS" starttime="20240207 22:23:29.646" endtime="20240207 22:23:31.373"/>
-</for>
-<status status="PASS" starttime="20240207 22:23:29.631" endtime="20240207 22:23:31.373"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:23:32.374" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:23:31.373" endtime="20240207 22:23:32.374"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${btnbuscar}</arg>
-<arg>30</arg>
-<arg>Error: kmkk</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:32.374" endtime="20240207 22:23:32.754"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${btnbuscar}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:32.754" level="INFO">Clicking element 'xpath:(//span[contains(.,'BUSCAR')])[1]'.</msg>
-<status status="PASS" starttime="20240207 22:23:32.754" endtime="20240207 22:23:33.020"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${divModal}</arg>
-<arg>80</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20240207 22:23:33.020" endtime="20240207 22:23:37.762"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${posicion}</var>
-<arg>${i}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:23:37.763" level="INFO">${posicion} = 2</msg>
-<status status="PASS" starttime="20240207 22:23:37.762" endtime="20240207 22:23:37.763"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${imprime resultado}</var>
-<arg>wait until element is visible</arg>
-<arg>${lblResultado}</arg>
-<arg>60</arg>
-<arg>Error:No se visualizo el resultado</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lblResultado}</arg>
-<arg>60</arg>
-<arg>Error:No se visualizo el resultado</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:37.763" endtime="20240207 22:23:38.009"/>
-</kw>
-<msg timestamp="20240207 22:23:38.009" level="INFO">${imprime resultado} = True</msg>
-<status status="PASS" starttime="20240207 22:23:37.763" endtime="20240207 22:23:38.009"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>no se muestra resultado${imprime resultado}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:38.011" endtime="20240207 22:23:38.012"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${imprime resultado}</arg>
-<arg>escribir resultado</arg>
-<arg>${posicion}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${numero}</arg>
-<arg>ELSE</arg>
-<arg>ingresa de nuevo al modulo renovacion</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="escribir resultado" library="RenovacionesKeywords">
-<arg>${posicion}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${numero}</arg>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:23:39.022" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:23:38.015" endtime="20240207 22:23:39.022"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${resultado}</var>
-<arg>${lblresultado}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:39.271" level="INFO">${resultado} = Cliente encontrado: CARMINA AYALA</msg>
-<status status="PASS" starttime="20240207 22:23:39.022" endtime="20240207 22:23:39.271"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>resultadooooo${resultado}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:39.272" endtime="20240207 22:23:39.272"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${resultado}</var>
-<arg>${resultado}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:23:39.273" level="INFO">${resultado} = Cliente encontrado: CARMINA AYALA</msg>
-<status status="PASS" starttime="20240207 22:23:39.273" endtime="20240207 22:23:39.273"/>
-</kw>
-<kw name="Escribe Mensaje" library="readexcel">
-<arg>${posicion}</arg>
-<arg>${resultado}</arg>
-<arg>${nombreDoc}</arg>
-<status status="PASS" starttime="20240207 22:23:39.273" endtime="20240207 22:23:39.308"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${flag}</var>
-<arg>element should be enabled</arg>
-<arg>${btnContinuar}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Enabled" library="SeleniumLibrary">
-<arg>${btnContinuar}</arg>
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:39.309" endtime="20240207 22:23:39.661"/>
-</kw>
-<msg timestamp="20240207 22:23:39.661" level="INFO">${flag} = True</msg>
-<status status="PASS" starttime="20240207 22:23:39.308" endtime="20240207 22:23:39.661"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>bandera continuar${flag}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:39.661" endtime="20240207 22:23:39.662"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${flag}</arg>
-<arg>validar datos de renovacion</arg>
-<arg>${posicion}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${telefono}</arg>
-<arg>ELSE</arg>
-<arg>ingresa de nuevo al modulo renovacion</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="validar datos de renovacion" library="RenovacionesKeywords">
-<arg>${posicion}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${telefono}</arg>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${divModal}</arg>
-<arg>80</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20240207 22:23:39.664" endtime="20240207 22:23:39.913"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:23:41.917" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240207 22:23:39.913" endtime="20240207 22:23:41.917"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${btnContinuar}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:41.918" level="INFO">Clicking element 'xpath://*[@id='formIdent:btnContinuar']'.</msg>
-<status status="PASS" starttime="20240207 22:23:41.917" endtime="20240207 22:23:42.197"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:23:44.201" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240207 22:23:42.197" endtime="20240207 22:23:44.201"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${flag}</var>
-<arg>wait until element is visible</arg>
-<arg>${lbldiasrestantes}</arg>
-<arg>30</arg>
-<arg>Error:No se visualizo los dias restantes</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lbldiasrestantes}</arg>
-<arg>30</arg>
-<arg>Error:No se visualizo los dias restantes</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:44.201" endtime="20240207 22:23:48.391"/>
-</kw>
-<msg timestamp="20240207 22:23:48.391" level="INFO">${flag} = True</msg>
-<status status="PASS" starttime="20240207 22:23:44.201" endtime="20240207 22:23:48.391"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>no se muestra dias restantes${flag}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:48.392" endtime="20240207 22:23:48.393"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${flag}</arg>
-<arg>Escribir datos de renovacion</arg>
-<arg>${i}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${telefono}</arg>
-<arg>ELSE</arg>
-<arg>ingresa de nuevo al modulo renovacion</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Escribir datos de renovacion" library="RenovacionesKeywords">
-<arg>${i}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${telefono}</arg>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:23:49.406" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:23:48.397" endtime="20240207 22:23:49.406"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lbldiasrestantes}</arg>
-<arg>30</arg>
-<arg>Error:No se visualizo los dias restantes</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:49.407" endtime="20240207 22:23:49.660"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${equipo}</var>
-<arg>${lblequipo}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:49.911" level="INFO">${equipo} = $3,450.00</msg>
-<status status="PASS" starttime="20240207 22:23:49.660" endtime="20240207 22:23:49.911"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${financiamiento}</var>
-<arg>${lblfinanciamiento}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:50.162" level="INFO">${financiamiento} = $2,716.86</msg>
-<status status="PASS" starttime="20240207 22:23:49.911" endtime="20240207 22:23:50.162"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${plazoactual}</var>
-<arg>${lblplazoactual}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:50.416" level="INFO">${plazoactual} = 24</msg>
-<status status="PASS" starttime="20240207 22:23:50.163" endtime="20240207 22:23:50.416"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${plazorestante}</var>
-<arg>${lblplazorestante}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:50.666" level="INFO">${plazorestante} = 0</msg>
-<status status="PASS" starttime="20240207 22:23:50.417" endtime="20240207 22:23:50.666"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${diasrestantes}</var>
-<arg>${lbldiasrestantes}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:50.919" level="INFO">${diasrestantes} = 672</msg>
-<status status="PASS" starttime="20240207 22:23:50.666" endtime="20240207 22:23:50.919"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${equipo}</var>
-<arg>${equipo}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:23:50.920" level="INFO">${equipo} = $3,450.00</msg>
-<status status="PASS" starttime="20240207 22:23:50.920" endtime="20240207 22:23:50.920"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${financiamiento}</var>
-<arg>${financiamiento}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:23:50.920" level="INFO">${financiamiento} = $2,716.86</msg>
-<status status="PASS" starttime="20240207 22:23:50.920" endtime="20240207 22:23:50.920"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${plazoactual}</var>
-<arg>${plazoactual}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:23:50.921" level="INFO">${plazoactual} = 24</msg>
-<status status="PASS" starttime="20240207 22:23:50.921" endtime="20240207 22:23:50.921"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${plazorestante}</var>
-<arg>${plazorestante}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:23:50.921" level="INFO">${plazorestante} = 0</msg>
-<status status="PASS" starttime="20240207 22:23:50.921" endtime="20240207 22:23:50.921"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${diasrestantes}</var>
-<arg>${diasrestantes}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:23:50.922" level="INFO">${diasrestantes} = 672</msg>
-<status status="PASS" starttime="20240207 22:23:50.921" endtime="20240207 22:23:50.922"/>
-</kw>
-<kw name="Escribe Resultado" library="readexcel">
-<arg>${i}</arg>
-<arg>${equipo}</arg>
-<arg>${financiamiento}</arg>
-<arg>${plazoactual}</arg>
-<arg>${plazorestante}</arg>
-<arg>${diasrestantes}</arg>
-<arg>${nombreDoc}</arg>
-<status status="PASS" starttime="20240207 22:23:50.922" endtime="20240207 22:23:50.944"/>
-</kw>
-<kw name="Convert To Integer" library="BuiltIn">
-<var>${Diasrestint}</var>
-<arg>${diasrestantes}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<msg timestamp="20240207 22:23:50.945" level="INFO">${Diasrestint} = 672</msg>
-<status status="PASS" starttime="20240207 22:23:50.944" endtime="20240207 22:23:50.945"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>dias restantes int${Diasrestint}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:50.945" endtime="20240207 22:23:50.946"/>
-</kw>
-<kw name="Convert To Integer" library="BuiltIn">
-<var>${numero}</var>
-<arg>90</arg>
-<doc>Converts the given item to an integer number.</doc>
-<msg timestamp="20240207 22:23:50.947" level="INFO">${numero} = 90</msg>
-<status status="PASS" starttime="20240207 22:23:50.946" endtime="20240207 22:23:50.947"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${Diasrestint}&lt;=${numero}</arg>
-<arg>Obtener datos para renovacion</arg>
-<arg>${i}</arg>
-<arg>${nombreDoc}</arg>
-<arg>ELSE</arg>
-<arg>Ingresamos al modulo de oferta primaria</arg>
-<arg>${telefono}</arg>
-<arg>${i}</arg>
-<arg>${nombreDoc}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Ingresamos al modulo de oferta primaria" library="RenovacionesKeywords">
-<arg>${telefono}</arg>
-<arg>${i}</arg>
-<arg>${nombreDoc}</arg>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20240207 22:23:50.948" endtime="20240207 22:23:52.679"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:23:54.689" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240207 22:23:52.679" endtime="20240207 22:23:54.689"/>
-</kw>
-<kw name="assert click element" library="Keywords">
-<arg>${btntramites}</arg>
-<arg>5</arg>
-<arg>Error:No se pudo acceder al módulo de Tramites en línea</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:54.690" endtime="20240207 22:23:54.926"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:54.926" endtime="20240207 22:23:55.287"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:55.288" level="INFO">Clicking element 'xpath://img[contains(@id,'idMenuSenal')]'.</msg>
-<status status="PASS" starttime="20240207 22:23:55.287" endtime="20240207 22:23:55.567"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:54.689" endtime="20240207 22:23:55.567"/>
-</kw>
-<kw name="assert click element" library="Keywords">
-<arg>${lblOfertaPrimaria}</arg>
-<arg>5</arg>
-<arg>Error:No se pudo acceder al módulo de oferta primaria</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:23:55.568" endtime="20240207 22:23:55.818"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:55.818" endtime="20240207 22:23:56.197"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:56.199" level="INFO">Clicking element 'xpath://span[contains(.,'Cambio de Oferta Primaria')]'.</msg>
-<status status="PASS" starttime="20240207 22:23:56.197" endtime="20240207 22:23:56.464"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:55.567" endtime="20240207 22:23:56.464"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>numero oferta primaria${numero}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:56.464" endtime="20240207 22:23:56.465"/>
-</kw>
-<kw name="valida texto" library="RenovacionesKeywords">
-<arg>${numero}</arg>
-<arg>${nombreDoc}</arg>
-<kw name="numero de filas" library="RenovacionesKeywords">
-<var>${filas}</var>
-<arg>${nombreDoc}</arg>
-<doc>leyendo el numero de filas</doc>
-<kw name="Numero Filas" library="readexcel">
-<var>${res}</var>
-<arg>${nombreDoc}</arg>
-<arg>numeros</arg>
-<msg timestamp="20240207 22:23:56.474" level="INFO">${res} = 3</msg>
-<status status="PASS" starttime="20240207 22:23:56.466" endtime="20240207 22:23:56.474"/>
-</kw>
-<msg timestamp="20240207 22:23:56.475" level="INFO">${filas} = 3</msg>
-<status status="PASS" starttime="20240207 22:23:56.466" endtime="20240207 22:23:56.475"/>
-</kw>
-<for flavor="IN RANGE">
-<var>${Result}</var>
-<value>5</value>
-<iter>
-<var name="${Result}">0</var>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${inumero}</arg>
-<arg>${numero}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:56.476" level="INFO">Typing text '5543672518' into text field 'xpath://*[@id='formIdent:folioid']'.</msg>
-<status status="PASS" starttime="20240207 22:23:56.475" endtime="20240207 22:23:57.352"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:23:58.362" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:23:57.353" endtime="20240207 22:23:58.362"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${inserted_text}</var>
-<arg>${inumero}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:23:58.614" level="INFO">${inserted_text} = 5543672518</msg>
-<status status="PASS" starttime="20240207 22:23:58.362" endtime="20240207 22:23:58.614"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${num}</var>
-<arg>${numero}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:23:58.615" level="INFO">${num} = 5543672518</msg>
-<status status="PASS" starttime="20240207 22:23:58.614" endtime="20240207 22:23:58.615"/>
-</kw>
-<kw name="Replace String" library="String">
-<var>${inserted_text}</var>
-<arg>${inserted_text}</arg>
-<arg>_</arg>
-<arg>0</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<msg timestamp="20240207 22:23:58.616" level="INFO">${inserted_text} = 5543672518</msg>
-<status status="PASS" starttime="20240207 22:23:58.615" endtime="20240207 22:23:58.616"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>texto insertado${inserted_text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:58.616" endtime="20240207 22:23:58.616"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>numero${numero}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:58.617" endtime="20240207 22:23:58.617"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${Result}</var>
-<arg>${inserted_text}==${num}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240207 22:23:58.618" level="INFO">${Result} = True</msg>
-<status status="PASS" starttime="20240207 22:23:58.618" endtime="20240207 22:23:58.618"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>result${result}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:23:58.619" endtime="20240207 22:23:58.619"/>
-</kw>
-<if>
-<branch type="IF" condition="${Result}== True">
-<break>
-<status status="PASS" starttime="20240207 22:23:58.620" endtime="20240207 22:23:58.620"/>
-</break>
-<status status="PASS" starttime="20240207 22:23:58.619" endtime="20240207 22:23:58.620"/>
-</branch>
-<status status="PASS" starttime="20240207 22:23:58.619" endtime="20240207 22:23:58.620"/>
-</if>
-<status status="PASS" starttime="20240207 22:23:56.475" endtime="20240207 22:23:58.620"/>
-</iter>
-<status status="PASS" starttime="20240207 22:23:56.475" endtime="20240207 22:23:58.620"/>
-</for>
-<status status="PASS" starttime="20240207 22:23:56.466" endtime="20240207 22:23:58.620"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:23:59.635" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:23:58.620" endtime="20240207 22:23:59.635"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${btnbuscar}</arg>
-<arg>30</arg>
-<arg>Error: No esta disponible el botón de busqueda</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:23:59.635" endtime="20240207 22:23:59.990"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${btnbuscar}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:23:59.991" level="INFO">Clicking element 'xpath:(//span[contains(.,'BUSCAR')])[1]'.</msg>
-<status status="PASS" starttime="20240207 22:23:59.990" endtime="20240207 22:24:00.272"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${divModal}</arg>
-<arg>80</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20240207 22:24:00.272" endtime="20240207 22:24:04.544"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${btncontinuar}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:24:04.546" level="INFO">Clicking element 'xpath://*[@id='formIdent:btnContinuar']'.</msg>
-<status status="PASS" starttime="20240207 22:24:04.544" endtime="20240207 22:24:04.824"/>
-</kw>
-<kw name="Assert to element" library="Keywords">
-<arg>${lblcambio_de_oferta_primaria}</arg>
-<arg>25</arg>
-<arg>Error:No se visualiza el cambio de oferta primaria</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:24:04.824" endtime="20240207 22:24:10.278"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:04.824" endtime="20240207 22:24:10.278"/>
-</kw>
-<kw name="Assert to element" library="Keywords">
-<arg>${lblPlan}</arg>
-<arg>25</arg>
-<arg>Error:No se visualiza plan</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:24:10.279" endtime="20240207 22:24:10.544"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:10.278" endtime="20240207 22:24:10.544"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${posicion}</var>
-<arg>${i}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:10.545" level="INFO">${posicion} = 2</msg>
-<status status="PASS" starttime="20240207 22:24:10.544" endtime="20240207 22:24:10.545"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${imprime resultado}</var>
-<arg>wait until element is visible</arg>
-<arg>${lblplan}</arg>
-<arg>60</arg>
-<arg>Error:No se visualizo el plan</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lblplan}</arg>
-<arg>60</arg>
-<arg>Error:No se visualizo el plan</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:24:10.546" endtime="20240207 22:24:10.797"/>
-</kw>
-<msg timestamp="20240207 22:24:10.797" level="INFO">${imprime resultado} = True</msg>
-<status status="PASS" starttime="20240207 22:24:10.546" endtime="20240207 22:24:10.798"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>no se muestra el plan${imprime resultado}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:24:10.798" endtime="20240207 22:24:10.799"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${imprime resultado}</arg>
-<arg>obten plan</arg>
-<arg>${posicion}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${numero}</arg>
-<arg>ELSE</arg>
-<arg>ingresa de nuevo al modulo renovacion</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="obten plan" library="RenovacionesKeywords">
-<arg>${posicion}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${numero}</arg>
-<kw name="Assert to element" library="Keywords">
-<arg>${lblcambio_de_oferta_primaria}</arg>
-<arg>35</arg>
-<arg>Error: no se visualiza el cambio de oferta primaria</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:24:10.803" endtime="20240207 22:24:11.047"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:10.802" endtime="20240207 22:24:11.047"/>
-</kw>
-<kw name="Assert to element" library="Keywords">
-<arg>${lblPlan}</arg>
-<arg>35</arg>
-<arg>Error: no se visualiza el plan</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:24:11.048" endtime="20240207 22:24:11.298"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:11.047" endtime="20240207 22:24:11.298"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:24:13.305" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240207 22:24:11.298" endtime="20240207 22:24:13.305"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${resultado}</var>
-<arg>${lblplan}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:24:13.554" level="INFO">${resultado} = TELCEL MAX SIN LIMITE MIXTO 6500 PLATINO RS INCLUIDAS</msg>
-<status status="PASS" starttime="20240207 22:24:13.305" endtime="20240207 22:24:13.554"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>plan${resultado}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:24:13.554" endtime="20240207 22:24:13.555"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${resultado}</var>
-<arg>${resultado}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:13.556" level="INFO">${resultado} = TELCEL MAX SIN LIMITE MIXTO 6500 PLATINO RS INCLUIDAS</msg>
-<status status="PASS" starttime="20240207 22:24:13.555" endtime="20240207 22:24:13.556"/>
-</kw>
-<kw name="Escribe Mensaje" library="readexcel">
-<arg>${posicion}</arg>
-<arg>${resultado}</arg>
-<arg>${nombreDoc}</arg>
-<status status="PASS" starttime="20240207 22:24:13.556" endtime="20240207 22:24:13.581"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:24:14.596" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:24:13.582" endtime="20240207 22:24:14.596"/>
-</kw>
-<kw name="Ingresa al modulo de activaciones" library="RenovacionesKeywords">
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20240207 22:24:14.597" endtime="20240207 22:24:15.854"/>
-</kw>
-<kw name="assert click element" library="Keywords">
-<arg>${btntramites}</arg>
-<arg>5</arg>
-<arg>Error:No se pudo acceder al módulo de Tramites en línea</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:24:15.855" endtime="20240207 22:24:16.105"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:24:16.105" endtime="20240207 22:24:16.482"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:24:16.483" level="INFO">Clicking element 'xpath://img[contains(@id,'idMenuSenal')]'.</msg>
-<status status="PASS" starttime="20240207 22:24:16.482" endtime="20240207 22:24:16.748"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:15.855" endtime="20240207 22:24:16.748"/>
-</kw>
-<kw name="assert click element" library="Keywords">
-<arg>${BtnActivacion}</arg>
-<arg>5</arg>
-<arg>Error:No se pudo acceder al servicio de Activaciones</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:24:16.749" endtime="20240207 22:24:16.997"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:24:16.998" endtime="20240207 22:24:17.377"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:24:17.379" level="INFO">Clicking element 'xpath://span[@class='ui-menuitem-text'][contains(.,'Activacion')]'.</msg>
-<status status="PASS" starttime="20240207 22:24:17.377" endtime="20240207 22:24:17.658"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:16.748" endtime="20240207 22:24:17.658"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:14.596" endtime="20240207 22:24:17.658"/>
-</kw>
-<kw name="ingresar numero de activacion" library="RenovacionesKeywords">
-<arg>${numero}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${posicion}</arg>
-<kw name="valida texto" library="RenovacionesKeywords">
-<arg>${numero}</arg>
-<arg>${nombreDoc}</arg>
-<kw name="numero de filas" library="RenovacionesKeywords">
-<var>${filas}</var>
-<arg>${nombreDoc}</arg>
-<doc>leyendo el numero de filas</doc>
-<kw name="Numero Filas" library="readexcel">
-<var>${res}</var>
-<arg>${nombreDoc}</arg>
-<arg>numeros</arg>
-<msg timestamp="20240207 22:24:17.680" level="INFO">${res} = 3</msg>
-<status status="PASS" starttime="20240207 22:24:17.660" endtime="20240207 22:24:17.680"/>
-</kw>
-<msg timestamp="20240207 22:24:17.680" level="INFO">${filas} = 3</msg>
-<status status="PASS" starttime="20240207 22:24:17.660" endtime="20240207 22:24:17.680"/>
-</kw>
-<for flavor="IN RANGE">
-<var>${Result}</var>
-<value>5</value>
-<iter>
-<var name="${Result}">0</var>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${inumero}</arg>
-<arg>${numero}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240207 22:24:17.682" level="INFO">Typing text '5543672518' into text field 'xpath://*[@id='formIdent:folioid']'.</msg>
-<status status="PASS" starttime="20240207 22:24:17.681" endtime="20240207 22:24:18.545"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:24:19.551" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:24:18.545" endtime="20240207 22:24:19.551"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${inserted_text}</var>
-<arg>${inumero}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:19.801" level="INFO">${inserted_text} = 5543672518</msg>
-<status status="PASS" starttime="20240207 22:24:19.551" endtime="20240207 22:24:19.801"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${num}</var>
-<arg>${numero}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:19.802" level="INFO">${num} = 5543672518</msg>
-<status status="PASS" starttime="20240207 22:24:19.801" endtime="20240207 22:24:19.802"/>
-</kw>
-<kw name="Replace String" library="String">
-<var>${inserted_text}</var>
-<arg>${inserted_text}</arg>
-<arg>_</arg>
-<arg>0</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<msg timestamp="20240207 22:24:19.803" level="INFO">${inserted_text} = 5543672518</msg>
-<status status="PASS" starttime="20240207 22:24:19.802" endtime="20240207 22:24:19.803"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>texto insertado${inserted_text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:24:19.803" endtime="20240207 22:24:19.804"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>numero${numero}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:24:19.804" endtime="20240207 22:24:19.804"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${Result}</var>
-<arg>${inserted_text}==${num}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240207 22:24:19.805" level="INFO">${Result} = True</msg>
-<status status="PASS" starttime="20240207 22:24:19.805" endtime="20240207 22:24:19.806"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>result${result}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:24:19.806" endtime="20240207 22:24:19.806"/>
-</kw>
-<if>
-<branch type="IF" condition="${Result}== True">
-<break>
-<status status="PASS" starttime="20240207 22:24:19.807" endtime="20240207 22:24:19.807"/>
-</break>
-<status status="PASS" starttime="20240207 22:24:19.807" endtime="20240207 22:24:19.807"/>
-</branch>
-<status status="PASS" starttime="20240207 22:24:19.806" endtime="20240207 22:24:19.807"/>
-</if>
-<status status="PASS" starttime="20240207 22:24:17.681" endtime="20240207 22:24:19.807"/>
-</iter>
-<status status="PASS" starttime="20240207 22:24:17.681" endtime="20240207 22:24:19.807"/>
-</for>
-<status status="PASS" starttime="20240207 22:24:17.659" endtime="20240207 22:24:19.807"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:24:20.823" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:24:19.808" endtime="20240207 22:24:20.823"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${btnbuscarACT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:24:20.824" level="INFO">Clicking element 'xpath:(//span[contains(.,'BUSCAR')])[1]'.</msg>
-<status status="PASS" starttime="20240207 22:24:20.823" endtime="20240207 22:24:21.105"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${btnnewRegistro}</arg>
-<arg>30</arg>
-<arg>Error: No esta disponible el botón de nuevo registro</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:24:21.105" endtime="20240207 22:24:21.482"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${divModal}</arg>
-<arg>80</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20240207 22:24:21.482" endtime="20240207 22:24:24.901"/>
-</kw>
-<kw name="assert click element" library="Keywords">
-<arg>${btnnewRegistro}</arg>
-<arg>5</arg>
-<arg>Error: No esta disponible el botón de nuevo registro</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:24:24.903" endtime="20240207 22:24:25.151"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:24:25.151" endtime="20240207 22:24:25.526"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:24:25.527" level="INFO">Clicking element 'xpath://span[contains(.,'NUEVO REGISTRO')]'.</msg>
-<status status="PASS" starttime="20240207 22:24:25.526" endtime="20240207 22:24:25.804"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:24.901" endtime="20240207 22:24:25.804"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:24:27.812" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240207 22:24:25.804" endtime="20240207 22:24:27.812"/>
-</kw>
-<kw name="Obtener datos para activacion" library="RenovacionesKeywords">
-<arg>${i}</arg>
-<arg>${nombreDoc}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lblappaterno}</arg>
-<arg>30</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:24:27.813" endtime="20240207 22:24:37.016"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${Appaterno}</var>
-<arg>${lblAppaterno}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:37.298" level="INFO">${Appaterno} = AYALA</msg>
-<status status="PASS" starttime="20240207 22:24:37.017" endtime="20240207 22:24:37.298"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${Apmaterno}</var>
-<arg>${lblApmaterno}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:37.550" level="INFO">${Apmaterno} = GARCIA</msg>
-<status status="PASS" starttime="20240207 22:24:37.298" endtime="20240207 22:24:37.550"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${Nombre}</var>
-<arg>${lblNombre}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:37.804" level="INFO">${Nombre} = CARMINA</msg>
-<status status="PASS" starttime="20240207 22:24:37.550" endtime="20240207 22:24:37.804"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${Rfc}</var>
-<arg>${lblRfc}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:38.059" level="INFO">${Rfc} = AAGC611106000</msg>
-<status status="PASS" starttime="20240207 22:24:37.804" endtime="20240207 22:24:38.059"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${lblmail}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20240207 22:24:38.060" endtime="20240207 22:24:38.576"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${Email}</var>
-<arg>${lblmail}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:38.828" level="INFO">${Email} = CARMINAAYALA14@GMAIL.COM</msg>
-<status status="PASS" starttime="20240207 22:24:38.576" endtime="20240207 22:24:38.828"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${TelCasa}</var>
-<arg>${lblTelCasa}</arg>
-<arg>Value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:39.079" level="INFO">${TelCasa} = AAGC611106000</msg>
-<status status="PASS" starttime="20240207 22:24:38.829" endtime="20240207 22:24:39.079"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${Teloficina}</var>
-<arg>${lblTelOficina}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:39.327" level="INFO">${Teloficina} = 5613261479</msg>
-<status status="PASS" starttime="20240207 22:24:39.080" endtime="20240207 22:24:39.327"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>window.scrollTo(0,450)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20240207 22:24:39.328" level="INFO">Executing JavaScript:
-window.scrollTo(0,450)
-Without any arguments.</msg>
-<status status="PASS" starttime="20240207 22:24:39.327" endtime="20240207 22:24:39.438"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${lbltcalleA}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20240207 22:24:39.438" endtime="20240207 22:24:39.958"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${TCalle}</var>
-<arg>${lbltcalleA}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:40.208" level="INFO">${TCalle} = None</msg>
-<status status="PASS" starttime="20240207 22:24:39.958" endtime="20240207 22:24:40.208"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${Calle}</var>
-<arg>${lblcalleA}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:40.457" level="INFO">${Calle} = RIO SAN JAVIER 220 A</msg>
-<status status="PASS" starttime="20240207 22:24:40.209" endtime="20240207 22:24:40.457"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${lblnumextA}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20240207 22:24:40.458" endtime="20240207 22:24:40.977"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${NumExt}</var>
-<arg>${lblnumextA}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:41.210" level="INFO">${NumExt} = 101</msg>
-<status status="PASS" starttime="20240207 22:24:40.977" endtime="20240207 22:24:41.210"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${lblnumintA}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20240207 22:24:41.210" endtime="20240207 22:24:41.714"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${NumInt}</var>
-<arg>${lblnumintA}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:41.967" level="INFO">${NumInt} = </msg>
-<status status="PASS" starttime="20240207 22:24:41.714" endtime="20240207 22:24:41.967"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${lblcpA}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20240207 22:24:41.967" endtime="20240207 22:24:42.488"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${Cp}</var>
-<arg>${lblcpA}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:42.739" level="INFO">${Cp} = 07270</msg>
-<status status="PASS" starttime="20240207 22:24:42.488" endtime="20240207 22:24:42.739"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${lblmunicipioA}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20240207 22:24:42.739" endtime="20240207 22:24:43.240"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${Municipio}</var>
-<arg>${lblmunicipioA}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:43.476" level="INFO">${Municipio} = GUSTAVO A. MADERO</msg>
-<status status="PASS" starttime="20240207 22:24:43.240" endtime="20240207 22:24:43.476"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${lblestadoA}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20240207 22:24:43.476" endtime="20240207 22:24:43.997"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${Estado}</var>
-<arg>${lblestadoA}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:44.249" level="INFO">${Estado} = CIUDAD DE MEXICO</msg>
-<status status="PASS" starttime="20240207 22:24:43.997" endtime="20240207 22:24:44.249"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${lblciudadA}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20240207 22:24:44.249" endtime="20240207 22:24:44.770"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${Ciudad}</var>
-<arg>${lblciudadA}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:45.022" level="INFO">${Ciudad} = CIUDAD DE MEXICO</msg>
-<status status="PASS" starttime="20240207 22:24:44.770" endtime="20240207 22:24:45.022"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${lblcoloniaA}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20240207 22:24:45.022" endtime="20240207 22:24:45.542"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${Colonia}</var>
-<arg>${lblcoloniaA}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:45.780" level="INFO">${Colonia} = RESIDENCIAL ACUEDUCTO DE GUADALUPE</msg>
-<status status="PASS" starttime="20240207 22:24:45.542" endtime="20240207 22:24:45.780"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Appaterno}</var>
-<arg>${Appaterno}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.781" level="INFO">${Appaterno} = AYALA</msg>
-<status status="PASS" starttime="20240207 22:24:45.780" endtime="20240207 22:24:45.781"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Apmaterno}</var>
-<arg>${Apmaterno}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.782" level="INFO">${Apmaterno} = GARCIA</msg>
-<status status="PASS" starttime="20240207 22:24:45.781" endtime="20240207 22:24:45.782"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Nombre}</var>
-<arg>${Nombre}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.782" level="INFO">${Nombre} = CARMINA</msg>
-<status status="PASS" starttime="20240207 22:24:45.782" endtime="20240207 22:24:45.782"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Rfc}</var>
-<arg>${Rfc}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.783" level="INFO">${Rfc} = AAGC611106000</msg>
-<status status="PASS" starttime="20240207 22:24:45.783" endtime="20240207 22:24:45.783"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Email}</var>
-<arg>${Email}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.784" level="INFO">${Email} = CARMINAAYALA14@GMAIL.COM</msg>
-<status status="PASS" starttime="20240207 22:24:45.783" endtime="20240207 22:24:45.784"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${TCalle}</var>
-<arg>${TCalle}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.784" level="INFO">${TCalle} = None</msg>
-<status status="PASS" starttime="20240207 22:24:45.784" endtime="20240207 22:24:45.784"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Calle}</var>
-<arg>${Calle}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.785" level="INFO">${Calle} = RIO SAN JAVIER 220 A</msg>
-<status status="PASS" starttime="20240207 22:24:45.785" endtime="20240207 22:24:45.785"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${NumExt}</var>
-<arg>${NumExt}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.786" level="INFO">${NumExt} = 101</msg>
-<status status="PASS" starttime="20240207 22:24:45.785" endtime="20240207 22:24:45.786"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${NumInt}</var>
-<arg>${NumInt}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.787" level="INFO">${NumInt} = </msg>
-<status status="PASS" starttime="20240207 22:24:45.786" endtime="20240207 22:24:45.787"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Cp}</var>
-<arg>${Cp}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.787" level="INFO">${Cp} = 07270</msg>
-<status status="PASS" starttime="20240207 22:24:45.787" endtime="20240207 22:24:45.787"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Municipio}</var>
-<arg>${Municipio}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.788" level="INFO">${Municipio} = GUSTAVO A. MADERO</msg>
-<status status="PASS" starttime="20240207 22:24:45.787" endtime="20240207 22:24:45.788"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Estado}</var>
-<arg>${Estado}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.789" level="INFO">${Estado} = CIUDAD DE MEXICO</msg>
-<status status="PASS" starttime="20240207 22:24:45.788" endtime="20240207 22:24:45.789"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Ciudad}</var>
-<arg>${Ciudad}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.789" level="INFO">${Ciudad} = CIUDAD DE MEXICO</msg>
-<status status="PASS" starttime="20240207 22:24:45.789" endtime="20240207 22:24:45.790"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Colonia}</var>
-<arg>${Colonia}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.790" level="INFO">${Colonia} = RESIDENCIAL ACUEDUCTO DE GUADALUPE</msg>
-<status status="PASS" starttime="20240207 22:24:45.790" endtime="20240207 22:24:45.790"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${lblTelCasa}</var>
-<arg>${lblTelCasa}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.790" level="INFO">${lblTelCasa} = xpath://*[@id='formUsuario:rfc']</msg>
-<status status="PASS" starttime="20240207 22:24:45.790" endtime="20240207 22:24:45.790"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Teloficina}</var>
-<arg>${Teloficina}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:45.791" level="INFO">${Teloficina} = 5613261479</msg>
-<status status="PASS" starttime="20240207 22:24:45.790" endtime="20240207 22:24:45.791"/>
-</kw>
-<kw name="Escribe Datos Renovacion" library="readexcel">
-<arg>${i}</arg>
-<arg>${Appaterno}</arg>
-<arg>${Apmaterno}</arg>
-<arg>${Nombre}</arg>
-<arg>${Rfc}</arg>
-<arg>${Email}</arg>
-<arg>${TCalle}</arg>
-<arg>${Calle}</arg>
-<arg>${NumExt}</arg>
-<arg>${NumInt}</arg>
-<arg>${Cp}</arg>
-<arg>${Municipio}</arg>
-<arg>${Estado}</arg>
-<arg>${Ciudad}</arg>
-<arg>${Colonia}</arg>
-<arg>${lblTelCasa}</arg>
-<arg>${Teloficina}</arg>
-<arg>${nombreDoc}</arg>
-<status status="PASS" starttime="20240207 22:24:45.791" endtime="20240207 22:24:45.826"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20240207 22:24:45.826" endtime="20240207 22:24:47.010"/>
-</kw>
-<kw name="assert click element" library="Keywords">
-<arg>${btntramites}</arg>
-<arg>5</arg>
-<arg>Error:No se pudo acceder al módulo de Tramites en línea</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:24:47.012" endtime="20240207 22:24:47.261"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:24:47.261" endtime="20240207 22:24:47.637"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:24:47.639" level="INFO">Clicking element 'xpath://img[contains(@id,'idMenuSenal')]'.</msg>
-<status status="PASS" starttime="20240207 22:24:47.637" endtime="20240207 22:24:47.918"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:47.010" endtime="20240207 22:24:47.918"/>
-</kw>
-<kw name="assert click element" library="Keywords">
-<arg>${hrefrenovacion}</arg>
-<arg>5</arg>
-<arg>Error:No se pudo acceder al servicio de renovaciones</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:24:47.919" endtime="20240207 22:24:48.169"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:24:48.169" endtime="20240207 22:24:48.545"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:24:48.546" level="INFO">Clicking element 'xpath://span[@class='ui-menuitem-text'][contains(.,'Renovación')]'.</msg>
-<status status="PASS" starttime="20240207 22:24:48.545" endtime="20240207 22:24:48.825"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:47.918" endtime="20240207 22:24:48.825"/>
-</kw>
-<kw name="Assert to element" library="Keywords">
-<arg>${lblRenovacion}</arg>
-<arg>5</arg>
-<arg>Error: No se visualiza el módulo de renovaciones</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:24:48.827" endtime="20240207 22:24:49.611"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:48.826" endtime="20240207 22:24:49.611"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:27.812" endtime="20240207 22:24:49.611"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:17.658" endtime="20240207 22:24:49.612"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:10.801" endtime="20240207 22:24:49.612"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:10.799" endtime="20240207 22:24:49.612"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:50.947" endtime="20240207 22:24:49.612"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:50.947" endtime="20240207 22:24:49.612"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:48.395" endtime="20240207 22:24:49.612"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:48.393" endtime="20240207 22:24:49.613"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:39.663" endtime="20240207 22:24:49.613"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:39.662" endtime="20240207 22:24:49.613"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:38.014" endtime="20240207 22:24:49.613"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:38.013" endtime="20240207 22:24:49.613"/>
-</kw>
-<status status="PASS" starttime="20240207 22:23:28.223" endtime="20240207 22:24:49.613"/>
-</iter>
-<iter>
-<var name="${i}">3</var>
-<kw name="obteniendo valor columnas" library="RenovacionesKeywords">
-<var>${numero}</var>
-<arg>${nombreDoc}</arg>
-<arg>numeros</arg>
-<arg>${i}</arg>
-<arg>1</arg>
-<doc>obteniendo el valor de las columnas</doc>
-<kw name="Dato Columna" library="readexcel">
-<var>${res}</var>
-<arg>${nombreDoc}</arg>
-<arg>${hoja}</arg>
-<arg>${fila}</arg>
-<arg>${col}</arg>
-<msg timestamp="20240207 22:24:49.632" level="INFO">${res} = 5515043182</msg>
-<status status="PASS" starttime="20240207 22:24:49.614" endtime="20240207 22:24:49.632"/>
-</kw>
-<msg timestamp="20240207 22:24:49.632" level="INFO">${numero} = 5515043182</msg>
-<status status="PASS" starttime="20240207 22:24:49.613" endtime="20240207 22:24:49.632"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${inumero}</arg>
-<arg>25</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:24:49.633" endtime="20240207 22:24:50.005"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:24:51.019" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:24:50.006" endtime="20240207 22:24:51.019"/>
-</kw>
-<kw name="valida texto" library="RenovacionesKeywords">
-<arg>${numero}</arg>
-<arg>${nombreDoc}</arg>
-<kw name="numero de filas" library="RenovacionesKeywords">
-<var>${filas}</var>
-<arg>${nombreDoc}</arg>
-<doc>leyendo el numero de filas</doc>
-<kw name="Numero Filas" library="readexcel">
-<var>${res}</var>
-<arg>${nombreDoc}</arg>
-<arg>numeros</arg>
-<msg timestamp="20240207 22:24:51.037" level="INFO">${res} = 3</msg>
-<status status="PASS" starttime="20240207 22:24:51.021" endtime="20240207 22:24:51.037"/>
-</kw>
-<msg timestamp="20240207 22:24:51.038" level="INFO">${filas} = 3</msg>
-<status status="PASS" starttime="20240207 22:24:51.021" endtime="20240207 22:24:51.038"/>
-</kw>
-<for flavor="IN RANGE">
-<var>${Result}</var>
-<value>5</value>
-<iter>
-<var name="${Result}">0</var>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${inumero}</arg>
-<arg>${numero}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240207 22:24:51.040" level="INFO">Typing text '5515043182' into text field 'xpath://*[@id='formIdent:folioid']'.</msg>
-<status status="PASS" starttime="20240207 22:24:51.039" endtime="20240207 22:24:51.507"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:24:52.509" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:24:51.507" endtime="20240207 22:24:52.509"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${inserted_text}</var>
-<arg>${inumero}</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20240207 22:24:52.759" level="INFO">${inserted_text} = 5515043182</msg>
-<status status="PASS" starttime="20240207 22:24:52.509" endtime="20240207 22:24:52.759"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${num}</var>
-<arg>${numero}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:52.760" level="INFO">${num} = 5515043182</msg>
-<status status="PASS" starttime="20240207 22:24:52.759" endtime="20240207 22:24:52.760"/>
-</kw>
-<kw name="Replace String" library="String">
-<var>${inserted_text}</var>
-<arg>${inserted_text}</arg>
-<arg>_</arg>
-<arg>0</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<msg timestamp="20240207 22:24:52.761" level="INFO">${inserted_text} = 5515043182</msg>
-<status status="PASS" starttime="20240207 22:24:52.760" endtime="20240207 22:24:52.761"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>texto insertado${inserted_text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:24:52.761" endtime="20240207 22:24:52.762"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>numero${numero}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:24:52.762" endtime="20240207 22:24:52.762"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${Result}</var>
-<arg>${inserted_text}==${num}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240207 22:24:52.763" level="INFO">${Result} = True</msg>
-<status status="PASS" starttime="20240207 22:24:52.763" endtime="20240207 22:24:52.763"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>result${result}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:24:52.764" endtime="20240207 22:24:52.764"/>
-</kw>
-<if>
-<branch type="IF" condition="${Result}== True">
-<break>
-<status status="PASS" starttime="20240207 22:24:52.764" endtime="20240207 22:24:52.764"/>
-</break>
-<status status="PASS" starttime="20240207 22:24:52.764" endtime="20240207 22:24:52.765"/>
-</branch>
-<status status="PASS" starttime="20240207 22:24:52.764" endtime="20240207 22:24:52.765"/>
-</if>
-<status status="PASS" starttime="20240207 22:24:51.038" endtime="20240207 22:24:52.765"/>
-</iter>
-<status status="PASS" starttime="20240207 22:24:51.038" endtime="20240207 22:24:52.765"/>
-</for>
-<status status="PASS" starttime="20240207 22:24:51.020" endtime="20240207 22:24:52.765"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:24:53.780" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:24:52.765" endtime="20240207 22:24:53.780"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${btnbuscar}</arg>
-<arg>30</arg>
-<arg>Error: kmkk</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:24:53.780" endtime="20240207 22:24:54.158"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${btnbuscar}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:24:54.159" level="INFO">Clicking element 'xpath:(//span[contains(.,'BUSCAR')])[1]'.</msg>
-<status status="PASS" starttime="20240207 22:24:54.158" endtime="20240207 22:24:54.425"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${divModal}</arg>
-<arg>80</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20240207 22:24:54.425" endtime="20240207 22:24:59.132"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${posicion}</var>
-<arg>${i}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:24:59.133" level="INFO">${posicion} = 3</msg>
-<status status="PASS" starttime="20240207 22:24:59.132" endtime="20240207 22:24:59.133"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${imprime resultado}</var>
-<arg>wait until element is visible</arg>
-<arg>${lblResultado}</arg>
-<arg>60</arg>
-<arg>Error:No se visualizo el resultado</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lblResultado}</arg>
-<arg>60</arg>
-<arg>Error:No se visualizo el resultado</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:24:59.135" endtime="20240207 22:24:59.384"/>
-</kw>
-<msg timestamp="20240207 22:24:59.384" level="INFO">${imprime resultado} = True</msg>
-<status status="PASS" starttime="20240207 22:24:59.135" endtime="20240207 22:24:59.384"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>no se muestra resultado${imprime resultado}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:24:59.384" endtime="20240207 22:24:59.385"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${imprime resultado}</arg>
-<arg>escribir resultado</arg>
-<arg>${posicion}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${numero}</arg>
-<arg>ELSE</arg>
-<arg>ingresa de nuevo al modulo renovacion</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="escribir resultado" library="RenovacionesKeywords">
-<arg>${posicion}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${numero}</arg>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:25:00.399" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20240207 22:24:59.387" endtime="20240207 22:25:00.399"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${resultado}</var>
-<arg>${lblresultado}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:25:00.648" level="INFO">${resultado} = Cliente encontrado: JOSE LOPEZ</msg>
-<status status="PASS" starttime="20240207 22:25:00.399" endtime="20240207 22:25:00.648"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>resultadooooo${resultado}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:25:00.648" endtime="20240207 22:25:00.649"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${resultado}</var>
-<arg>${resultado}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240207 22:25:00.650" level="INFO">${resultado} = Cliente encontrado: JOSE LOPEZ</msg>
-<status status="PASS" starttime="20240207 22:25:00.649" endtime="20240207 22:25:00.650"/>
-</kw>
-<kw name="Escribe Mensaje" library="readexcel">
-<arg>${posicion}</arg>
-<arg>${resultado}</arg>
-<arg>${nombreDoc}</arg>
-<status status="PASS" starttime="20240207 22:25:00.650" endtime="20240207 22:25:00.671"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${flag}</var>
-<arg>element should be enabled</arg>
-<arg>${btnContinuar}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Enabled" library="SeleniumLibrary">
-<arg>${btnContinuar}</arg>
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:25:00.672" endtime="20240207 22:25:01.041"/>
-</kw>
-<msg timestamp="20240207 22:25:01.041" level="INFO">${flag} = True</msg>
-<status status="PASS" starttime="20240207 22:25:00.671" endtime="20240207 22:25:01.041"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>bandera continuar${flag}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:25:01.041" endtime="20240207 22:25:01.042"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${flag}</arg>
-<arg>validar datos de renovacion</arg>
-<arg>${posicion}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${telefono}</arg>
-<arg>ELSE</arg>
-<arg>ingresa de nuevo al modulo renovacion</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="validar datos de renovacion" library="RenovacionesKeywords">
-<arg>${posicion}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${telefono}</arg>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${divModal}</arg>
-<arg>80</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20240207 22:25:01.043" endtime="20240207 22:25:01.291"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:25:03.298" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240207 22:25:01.291" endtime="20240207 22:25:03.298"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${btnContinuar}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:25:03.299" level="INFO">Clicking element 'xpath://*[@id='formIdent:btnContinuar']'.</msg>
-<status status="PASS" starttime="20240207 22:25:03.298" endtime="20240207 22:25:03.579"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240207 22:25:05.590" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240207 22:25:03.579" endtime="20240207 22:25:05.590"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${flag}</var>
-<arg>wait until element is visible</arg>
-<arg>${lbldiasrestantes}</arg>
-<arg>30</arg>
-<arg>Error:No se visualizo los dias restantes</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lbldiasrestantes}</arg>
-<arg>30</arg>
-<arg>Error:No se visualizo los dias restantes</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20240207 22:25:37.022" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20240207 22:25:37.023" level="FAIL">Error:No se visualizo los dias restantes</msg>
-<status status="FAIL" starttime="20240207 22:25:05.591" endtime="20240207 22:25:37.031"/>
-</kw>
-<msg timestamp="20240207 22:25:37.031" level="INFO">${flag} = False</msg>
-<status status="PASS" starttime="20240207 22:25:05.590" endtime="20240207 22:25:37.032"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>no se muestra dias restantes${flag}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240207 22:25:37.032" endtime="20240207 22:25:37.033"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${flag}</arg>
-<arg>Escribir datos de renovacion</arg>
-<arg>${i}</arg>
-<arg>${nombreDoc}</arg>
-<arg>${telefono}</arg>
-<arg>ELSE</arg>
-<arg>ingresa de nuevo al modulo renovacion</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="ingresa de nuevo al modulo renovacion" library="RenovacionesKeywords">
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20240207 22:25:37.036" endtime="20240207 22:25:39.550"/>
-</kw>
-<kw name="assert click element" library="Keywords">
-<arg>${btntramites}</arg>
-<arg>5</arg>
-<arg>Error:No se pudo acceder al módulo de Tramites en línea</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:25:39.552" endtime="20240207 22:25:39.815"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:25:39.815" endtime="20240207 22:25:40.190"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:25:40.191" level="INFO">Clicking element 'xpath://img[contains(@id,'idMenuSenal')]'.</msg>
-<status status="PASS" starttime="20240207 22:25:40.190" endtime="20240207 22:25:40.485"/>
-</kw>
-<status status="PASS" starttime="20240207 22:25:39.550" endtime="20240207 22:25:40.485"/>
-</kw>
-<kw name="assert click element" library="Keywords">
-<arg>${hrefrenovacion}</arg>
-<arg>5</arg>
-<arg>Error:No se pudo acceder al servicio de renovaciones</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:25:40.486" endtime="20240207 22:25:40.752"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240207 22:25:40.752" endtime="20240207 22:25:41.130"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240207 22:25:41.132" level="INFO">Clicking element 'xpath://span[@class='ui-menuitem-text'][contains(.,'Renovación')]'.</msg>
-<status status="PASS" starttime="20240207 22:25:41.131" endtime="20240207 22:25:41.414"/>
-</kw>
-<status status="PASS" starttime="20240207 22:25:40.485" endtime="20240207 22:25:41.414"/>
-</kw>
-<kw name="Assert to element" library="Keywords">
-<arg>${lblRenovacion}</arg>
-<arg>5</arg>
-<arg>Error: No se visualiza el módulo de renovaciones</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Element}</arg>
-<arg>${Timeout}</arg>
-<arg>${MsError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240207 22:25:41.415" endtime="20240207 22:25:42.238"/>
-</kw>
-<status status="PASS" starttime="20240207 22:25:41.414" endtime="20240207 22:25:42.238"/>
-</kw>
-<status status="PASS" starttime="20240207 22:25:37.035" endtime="20240207 22:25:42.240"/>
-</kw>
-<status status="PASS" starttime="20240207 22:25:37.034" endtime="20240207 22:25:42.241"/>
-</kw>
-<status status="PASS" starttime="20240207 22:25:01.042" endtime="20240207 22:25:42.241"/>
-</kw>
-<status status="PASS" starttime="20240207 22:25:01.042" endtime="20240207 22:25:42.241"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:59.386" endtime="20240207 22:25:42.241"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:59.386" endtime="20240207 22:25:42.241"/>
-</kw>
-<status status="PASS" starttime="20240207 22:24:49.613" endtime="20240207 22:25:42.241"/>
-</iter>
-<status status="PASS" starttime="20240207 22:23:28.222" endtime="20240207 22:25:42.241"/>
-</for>
-<status status="PASS" starttime="20240207 22:23:28.197" endtime="20240207 22:25:42.241"/>
-</kw>
-<doc>Validar el tiempo que tienen los números teléfonicos para renovar su plan tarifario</doc>
-<tag>Renovacion</tag>
-<status status="PASS" starttime="20240207 22:23:02.248" endtime="20240207 22:25:42.242"/>
+<doc>oopoppipo</doc>
+<tag>cotizador</tag>
+<status status="PASS" starttime="20240209 19:39:39.623" endtime="20240209 19:40:05.852"/>
 </test>
-<status status="PASS" starttime="20240207 22:23:01.202" endtime="20240207 22:25:42.243"/>
+<status status="PASS" starttime="20240209 19:39:39.182" endtime="20240209 19:40:05.856"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Renovacion</stat>
+<stat pass="1" fail="0" skip="0">cotizador</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="001-BusquedaClientes">001-BusquedaClientes</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="003-Cotizador">003-Cotizador</stat>
 </suite>
 </statistics>
 <errors>

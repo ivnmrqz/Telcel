@@ -9,3 +9,4 @@ Variables    ../PageObject/Config.py
 Variables    ../PageObject/LoginObject.py
 Variables    ../PageObject/HomeObject.py
 Variables    ../PageObject/Renovaciones.py
+Variables    ../PageObject/LoginCotizadorObject.py
